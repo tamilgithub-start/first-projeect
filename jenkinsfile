@@ -8,9 +8,9 @@ node{
 	  sh 'mv target/myweb*.war target/newapp.war'
 }  
  stage('Build Docker Imager'){
-   sh 'docker build -t Docker.0.0.1 .'
+   sh 'docker build -t ocker.0.0.1 .'
    }
   stage('Docker deployment'){
-   sh 'docker run -d -p 8090:8080 --name tomcattest Docker.0.0.1' 
+   sh 'docker run -d -p 8090:8080 --name tomcattest ocker.0.0.1' 
    } 
 }
